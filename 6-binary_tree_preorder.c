@@ -5,6 +5,10 @@
 * @tree: the tree to traverse
 * @func: A pointer to a function to apply to each node
 *
+* Description: Traverses the tree using pre order.
+* We vist the root, the left sub-tree and the
+* right sub-tree in that order.
+*
 * Return: Nothing
 *
 */
