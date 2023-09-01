@@ -12,8 +12,11 @@ size_t calculate_height(const binary_tree_t *node)
 {
 	if (!node)
 		return (0);
-	size_t left_height = calculate_height(node->left);
-	size_t right_height = calculate_height(node->right);
+	size_t left_height;
+	size_t right_height;
+
+	left_height = calculate_height(node->right);
+	right_height = calculate_height(node->left);
 
 	return ((left_height > right_height) ?
 		(left_height + 1) :
