@@ -31,10 +31,12 @@ int binary_tree_balance(const binary_tree_t *tree)
 
 size_t calculate_height(const binary_tree_t *node)
 {
+	size_t left_height, right_height;
+
 	if (!node)
 		return (0);
-	size_t left_height = calculate_height(node->left);
-	size_t right_height = calculate_height(node->right);
+	left_height = calculate_height(node->left);
+	right_height = calculate_height(node->right);
 
 	return ((left_height > right_height) ?
 		(left_height + 1) :
